@@ -9,8 +9,8 @@ def x(n):
     return np.sin(n)
 
 
-fig = plt.figure(figsize=(10, 12),dpi=80)
-ax1= axisartist.Subplot(fig, 231)
+fig = plt.figure(figsize=(10, 10),dpi=80)
+ax1= axisartist.Subplot(fig, 331)
 fig.add_axes(ax1)
 ax1.axis[:].set_visible(False)
 ax1.axis["x"] = ax1.new_floating_axis(0,0)
@@ -29,7 +29,7 @@ plt.xlabel('t')
 plt.ylabel('e**t')
 
 
-ax2= axisartist.Subplot(fig, 232)
+ax2= axisartist.Subplot(fig, 332)
 fig.add_axes(ax2)
 ax2.axis[:].set_visible(False)
 ax2.axis["x"] = ax2.new_floating_axis(0,0)
@@ -46,7 +46,7 @@ plt.xlabel('t')
 plt.ylabel('sin(t)')
 
 
-ax3= axisartist.Subplot(fig, 233)
+ax3= axisartist.Subplot(fig, 333)
 fig.add_axes(ax3)
 ax3.axis[:].set_visible(False)
 ax3.axis["x"] = ax3.new_floating_axis(0,0)
@@ -61,7 +61,7 @@ t1=[0,1,1]
 t2=[1,1,0]
 plt.plot(t1,t2,'b-')
 
-ax4= axisartist.Subplot(fig, 234)
+ax4= axisartist.Subplot(fig, 334)
 fig.add_axes(ax4)
 ax4.axis[:].set_visible(False)
 ax4.axis["x"] = ax4.new_floating_axis(0,0)
@@ -79,7 +79,7 @@ plt.plot(x1,y1,'b-')
 def u(t):
     return np.array(t>0,dtype=np.int)
 
-ax5= axisartist.Subplot(fig, 235)
+ax5= axisartist.Subplot(fig, 335)
 fig.add_axes(ax5)
 ax5.axis[:].set_visible(False)
 ax5.axis["x"] = ax5.new_floating_axis(0,0)
@@ -93,7 +93,7 @@ plt.ylim(-0.2, 2)
 t3=np.arange(-10,10,0.01)
 plt.plot(t3,u(t3),'r-')
 
-ax6= axisartist.Subplot(fig, 236)
+ax6= axisartist.Subplot(fig, 336)
 fig.add_axes(ax6)
 ax6.axis[:].set_visible(False)
 ax6.axis["x"] = ax6.new_floating_axis(0,0)
@@ -106,4 +106,21 @@ plt.xlim(0,4)
 plt.ylim(-0.2, 1.2)
 t4=np.arange(0,4,0.01)
 plt.plot(t4,u(t4-1)-u(t4-3),'r-')
+
+def g(t):
+    return np.sin(t)/t
+
+ax7= axisartist.Subplot(fig, 337)
+fig.add_axes(ax7)
+ax7.axis[:].set_visible(False)
+ax7.axis["x"] = ax7.new_floating_axis(0,0)
+ax7.axis["x"].set_axisline_style("->", size = 1.0)
+ax7.axis["y"] = ax7.new_floating_axis(1,0)
+ax7.axis["y"].set_axisline_style("-|>", size = 1.0)
+ax7.axis["x"].set_axis_direction("top")
+ax7.axis["y"].set_axis_direction("right")
+plt.xlim(-15,15)
+plt.ylim(-0.4, 1.0)
+t5=np.arange(-15,15,0.01)
+plt.plot(t5,g(t5),'r-')
 plt.show()
