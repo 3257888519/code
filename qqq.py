@@ -9,7 +9,7 @@ def x(n):
     return np.sin(n)
 
 
-fig = plt.figure(figsize=(10, 10),dpi=80)
+fig = plt.figure(figsize=(10, 8),dpi=80)
 ax1= axisartist.Subplot(fig, 331)
 fig.add_axes(ax1)
 ax1.axis[:].set_visible(False)
@@ -26,7 +26,7 @@ plt.plot(t,f(t),'r-')
 plt.plot(t,f(-t),'r-')
 plt.plot(t,f(0*t),'r-')
 plt.xlabel('t')
-plt.ylabel('e**t')
+plt.title('e**t')
 
 
 ax2= axisartist.Subplot(fig, 332)
@@ -43,7 +43,7 @@ plt.ylim(-1, 1)
 n=np.arange(-9,9,0.01)
 plt.plot(n,x(n),'r-')
 plt.xlabel('t')
-plt.ylabel('sin(t)')
+plt.title('sin(t)')
 
 
 ax3= axisartist.Subplot(fig, 333)
@@ -59,6 +59,8 @@ plt.xlim(-5,5)
 plt.ylim(-1, 2)
 t1=[0,1,1]
 t2=[1,1,0]
+plt.xlabel('t')
+plt.title('energy signal')
 plt.plot(t1,t2,'b-')
 
 ax4= axisartist.Subplot(fig, 334)
@@ -75,6 +77,8 @@ plt.ylim(-0.2, 1)
 x1=[0,5,13]
 y1=[0,1,1]
 plt.plot(x1,y1,'b-')
+plt.xlabel('t')
+plt.title('power signal')
 
 def u(t):
     return np.array(t>0,dtype=np.int)
@@ -92,6 +96,8 @@ plt.xlim(-12,12)
 plt.ylim(-0.2, 2)
 t3=np.arange(-10,10,0.01)
 plt.plot(t3,u(t3),'r-')
+plt.xlabel('t')
+plt.title('unit step signal')
 
 ax6= axisartist.Subplot(fig, 336)
 fig.add_axes(ax6)
@@ -106,6 +112,8 @@ plt.xlim(0,4)
 plt.ylim(-0.2, 1.2)
 t4=np.arange(0,4,0.01)
 plt.plot(t4,u(t4-1)-u(t4-3),'r-')
+plt.xlabel('t')
+plt.title('u(t-1)-u(t-3)')
 
 def g(t):
     return np.sin(t)/t
@@ -123,4 +131,6 @@ plt.xlim(-15,15)
 plt.ylim(-0.4, 1.0)
 t5=np.arange(-15,15,0.01)
 plt.plot(t5,g(t5),'r-')
+plt.xlabel('t')
+plt.title('Sa(t)')
 plt.show()
