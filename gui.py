@@ -146,7 +146,7 @@ def hanshu5():
     plt.show()
 
 def hanshu6():
-    fig = plt.figure(figsize=(4, 3),dpi=80)
+    fig = plt.figure(figsize=(10,10),dpi=80)
     ax7= axisartist.Subplot(fig, 111)
     fig.add_axes(ax7)
     ax7.axis[:].set_visible(False)
@@ -156,15 +156,59 @@ def hanshu6():
     ax7.axis["y"].set_axisline_style("-|>", size = 1.0)
     ax7.axis["x"].set_axis_direction("top")
     ax7.axis["y"].set_axis_direction("right")
-    plt.xlim(-3.2,5.2)
-    plt.ylim(-32, 32)
-    a=2.0
-    for i7 in np.arange(-3,5):
+    plt.xlim(-3.2,8)
+    plt.ylim(-20, 15)
+    a=-1.5
+    for i7 in np.arange(-3,8):
         t14=a**i7
         t12=[i7,i7]
         t13=[0,t14]
         plt.plot(t12,t13,'r*-')
     plt.title('$x[n]=ca^n$')
+    plt.show()
+
+def hanshu7():
+    fig = plt.figure(figsize=(10,10),dpi=80)
+    ax8= axisartist.Subplot(fig, 111)
+    fig.add_axes(ax8)
+    ax8.axis[:].set_visible(False)
+    ax8.axis["x"] = ax8.new_floating_axis(0,0)
+    ax8.axis["x"].set_axisline_style("->", size = 1.0)
+    ax8.axis["y"] = ax8.new_floating_axis(1,0)
+    ax8.axis["y"].set_axisline_style("-|>", size = 1.0)
+    ax8.axis["x"].set_axis_direction("top")
+    ax8.axis["y"].set_axis_direction("right")
+    plt.xlim(-20,20)
+    plt.ylim(-1, 1)
+    for i8 in np.arange(-20,21):
+        t15=np.cos(8*i8/31)
+        t16=[i8,i8]
+        t17=[0,t15]
+        plt.plot(t16,t17,'r*-')
+    plt.title('$x[n]=cos(8n/31)$')
+    plt.show()
+
+def hanshu8():
+    fig = plt.figure(figsize=(10,10),dpi=80)
+    ax9= axisartist.Subplot(fig, 111)
+    fig.add_axes(ax9)
+    ax9.axis[:].set_visible(False)
+    ax9.axis["x"] = ax9.new_floating_axis(0,0)
+    ax9.axis["x"].set_axisline_style("->", size = 1.0)
+    ax9.axis["y"] = ax9.new_floating_axis(1,0)
+    ax9.axis["y"].set_axisline_style("-|>", size = 1.0)
+    ax9.axis["x"].set_axis_direction("top")
+    ax9.axis["y"].set_axis_direction("right")
+    plt.xlim(-20,20)
+    plt.ylim(-20,20)
+    c=1*np.exp((-1.0)**0.5*2)
+    for i9 in np.arange(-20,21):
+        a=2**i9*np.exp((-1.0)**0.5*2*i9)
+        t18=a*c
+        t19=[i9,i9]
+        t20=[0,t18]
+        plt.plot(t18,t19,'r*-')
+    plt.title('$x[n]=e^{2j}*2^ne^{2n+2}$')
     plt.show()
 
 
@@ -204,5 +248,15 @@ button.pack()
 button = tkinter.Button(top)
 button['text'] = 'x[n]=ca^n'
 button['command'] = hanshu6
+button.pack()
+
+button = tkinter.Button(top)
+button['text'] = 'cos(8n/31)'
+button['command'] = hanshu7
+button.pack()
+
+button = tkinter.Button(top)
+button['text'] = 'x[n]'
+button['command'] = hanshu8
 button.pack()
 top.mainloop()
