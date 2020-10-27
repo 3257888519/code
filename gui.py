@@ -22,7 +22,7 @@ def hanshu():
              t1=[i1,i1]
              t2=[0,1]
              plt.plot(t1,t2,'b*-')
-    plt.title('x[n]=1,n>=0;0,n<0;')
+    plt.title('1.x[n]=1,n>=0;0,n<0;')
     plt.show()
 
 def hanshu1():
@@ -47,8 +47,8 @@ def hanshu1():
             t3=[i2,i2]
             t4=[0,1]
             plt.plot(t3,t4,'b*-')
-            plt.title('δ[n]')
-            plt.xlabel('n')
+    plt.title('2.δ[n]')
+    plt.xlabel('n')
     plt.show()
 
 def hanshu2():
@@ -73,7 +73,7 @@ def hanshu2():
                  t5=[i3,i3]
                  t6=[0,1]
                  plt.plot(t5,t6,'b*-')
-    plt.title('u[n]')
+    plt.title('3.u[n]')
     plt.xlabel('n')
     plt.show()
 
@@ -99,7 +99,7 @@ def hanshu3():
              t7=[i4]
              t8=[0]
              plt.plot(t7,t8,'r*')
-    plt.title('$G_N[n]=1,0<=n<=6-1;0,n>=6$')
+    plt.title('$4.G_N[n]=1,0<=n<=6-1;0,n>=6$')
     plt.xlabel('n')
     plt.show()
 
@@ -120,12 +120,12 @@ def hanshu4():
         t9=[i5,i5]
         t10=[0,i5]
         plt.plot(t9,t10,'r*-')
-    plt.title('$δ_N[n]$')
+    plt.title('$5.δ_N[n]$')
     plt.xlabel('n')
     plt.show()
 
 def hanshu5():
-    fig = plt.figure(figsize=(10,10),dpi=80)
+    fig = plt.figure(figsize=(4,3),dpi=80)
     ax6= axisartist.Subplot(fig, 111)
     fig.add_axes(ax6)
     ax6.axis[:].set_visible(False)
@@ -141,12 +141,12 @@ def hanshu5():
          t11=[i6,i6]
          t12=[0,1]
          plt.plot(t11,t12,'r*-')
-    plt.title('$δ_N[n]$')
+    plt.title('$6.δ_N[n]$')
     plt.xlabel('n')
     plt.show()
 
 def hanshu6():
-    fig = plt.figure(figsize=(10,10),dpi=80)
+    fig = plt.figure(figsize=(10,8),dpi=80)
     ax7= axisartist.Subplot(fig, 111)
     fig.add_axes(ax7)
     ax7.axis[:].set_visible(False)
@@ -164,11 +164,11 @@ def hanshu6():
         t12=[i7,i7]
         t13=[0,t14]
         plt.plot(t12,t13,'r*-')
-    plt.title('$x[n]=ca^n$')
+    plt.title('$7.x[n]=ca^n$')
     plt.show()
 
 def hanshu7():
-    fig = plt.figure(figsize=(10,10),dpi=80)
+    fig = plt.figure(figsize=(10,8),dpi=80)
     ax8= axisartist.Subplot(fig, 111)
     fig.add_axes(ax8)
     ax8.axis[:].set_visible(False)
@@ -185,11 +185,11 @@ def hanshu7():
         t16=[i8,i8]
         t17=[0,t15]
         plt.plot(t16,t17,'r*-')
-    plt.title('$x[n]=cos(8n/31)$')
+    plt.title('$8.x[n]=cos(8n/31)$')
     plt.show()
 
 def hanshu8():
-    fig = plt.figure(figsize=(10,10),dpi=80)
+    fig = plt.figure(figsize=(10,8),dpi=80)
     ax9= axisartist.Subplot(fig, 111)
     fig.add_axes(ax9)
     ax9.axis[:].set_visible(False)
@@ -199,64 +199,65 @@ def hanshu8():
     ax9.axis["y"].set_axisline_style("-|>", size = 1.0)
     ax9.axis["x"].set_axis_direction("top")
     ax9.axis["y"].set_axis_direction("right")
-    plt.xlim(-20,20)
-    plt.ylim(-20,20)
-    c=1*np.exp((-1.0)**0.5*2)
-    for i9 in np.arange(-20,21):
-        a=2**i9*np.exp((-1.0)**0.5*2*i9)
+    plt.xlim(-5,8)
+    plt.ylim(-60,60)
+    d=1j
+    c=1*np.exp(d*1)
+    for i9 in np.arange(-5,8):
+        a=2.0**(i9)*np.exp(d*1*(i9))||ghjkl
         t18=a*c
         t19=[i9,i9]
         t20=[0,t18]
-        plt.plot(t18,t19,'r*-')
-    plt.title('$x[n]=e^{2j}*2^ne^{2n+2}$')
+        plt.plot(t19,t20,'r*-')
+    plt.title('$9.x[n]=e^{1j}*2^ne^{j1n}$')
     plt.show()
 
 
 top=tkinter.Tk(className='gui') 
 top.geometry('200x300')
 button = tkinter.Button(top)
-button['text'] = 'x[n]'
+button['text'] = '1.x[n]'
 button['command'] = hanshu
 button.pack()
 
 
 button = tkinter.Button(top)
-button['text'] = 'δ[n]'
+button['text'] = '2.δ[n]'
 button['command'] = hanshu1
 button.pack()
 
 button = tkinter.Button(top)
-button['text'] = 'u[n]'
+button['text'] = '3.u[n]'
 button['command'] = hanshu2
 button.pack()
 
 button = tkinter.Button(top)
-button['text'] = 'G_N[n]'
+button['text'] = '4.G_N[n]'
 button['command'] = hanshu3
 button.pack()
 
 button = tkinter.Button(top)
-button['text'] = 'δN[n]'
+button['text'] = '5.δN[n]'
 button['command'] = hanshu4
 button.pack()
 
 button = tkinter.Button(top)
-button['text'] = 'δN[n]'
+button['text'] = '6.δN[n]'
 button['command'] = hanshu5
 button.pack()
 
 button = tkinter.Button(top)
-button['text'] = 'x[n]=ca^n'
+button['text'] = '7.x[n]=ca^n'
 button['command'] = hanshu6
 button.pack()
 
 button = tkinter.Button(top)
-button['text'] = 'cos(8n/31)'
+button['text'] = '8.cos(8n/31)'
 button['command'] = hanshu7
 button.pack()
 
 button = tkinter.Button(top)
-button['text'] = 'x[n]'
+button['text'] = '9.x[n]'
 button['command'] = hanshu8
 button.pack()
 top.mainloop()
