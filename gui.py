@@ -204,7 +204,7 @@ def hanshu8():
     d=1j
     c=1*np.exp(d*1)
     for i9 in np.arange(-5,8):
-        a=2.0**(i9)*np.exp(d*1*(i9))||ghjkl
+        a=2.0**(i9)*np.exp(d*1*(i9))
         t18=a*c
         t19=[i9,i9]
         t20=[0,t18]
