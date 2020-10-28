@@ -306,8 +306,6 @@ plt.xlabel('t')
 
 plt.show( )
 
-![second1](https://github.com/3257888519/code/blob/master/photo/second1.jpg)
-
 # 第二次实验补充
 
 import numpy as np
