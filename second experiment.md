@@ -359,5 +359,3 @@ plt.title('x(t)=cos(ωt+θ)*e**(σt)')
 plt.xlabel('t')
 
 plt.show( )
-
-![second2](https://github.com/3257888519/code/blob/master/photo/second2.jpg)
