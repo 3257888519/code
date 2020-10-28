@@ -525,3 +525,21 @@ button['command'] = hanshu8
 button.pack()
 
 top.mainloop()
+
+![third1](https://3257888519.github.io/code/photos/third1.jpg)
+
+![third2](https://3257888519.github.io/code/photos/third2.jpg)
+
+![third3](https://3257888519.github.io/code/photos/third3.jpg)
+
+![third4](https://3257888519.github.io/code/photos/third4.jpg)
+
+![third5](https://3257888519.github.io/code/photos/third5.jpg)
+
+![third6](https://3257888519.github.io/code/photos/third6.jpg)
+
+![third7](https://3257888519.github.io/code/photos/third7.jpg)
+
+![third8](https://3257888519.github.io/code/photos/third8.jpg)
+
+![third9](https://3257888519.github.io/code/photos/third9.jpg)
