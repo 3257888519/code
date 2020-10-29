@@ -306,8 +306,6 @@ plt.xlabel('t')
 
 plt.show( )
 
-![second1](https://3257888519.github.io/code/photos/second1.jpg)
-
 # 第二次实验补充
 
 import numpy as np
@@ -359,5 +357,3 @@ plt.title('x(t)=cos(ωt+θ)*e**(σt)')
 plt.xlabel('t')
 
 plt.show( )
-
-![second2](https://3257888519.github.io/code/photos/second2.jpg)
